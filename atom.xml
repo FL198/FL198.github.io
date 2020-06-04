@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fl198.github.io/"/>
-  <updated>2020-06-03T14:16:46.696Z</updated>
+  <updated>2020-06-04T02:08:28.213Z</updated>
   <id>http://fl198.github.io/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://fl198.github.io/2020/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>http://fl198.github.io/2020/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-05-03T13:40:42.000Z</published>
-    <updated>2020-06-03T14:16:46.696Z</updated>
+    <updated>2020-06-04T02:08:28.213Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端常用设计模式"><a href="#前端常用设计模式" class="headerlink" title="前端常用设计模式"></a>前端常用设计模式</h1><h2 id="1-单例模式"><a href="#1-单例模式" class="headerlink" title="1. 单例模式"></a>1. 单例模式</h2><p>​        构造函数每次创建对象，只有一个被创建。节省资源，如果一个对象可以被复用，就没有必要额外再弄出一个新的对象出来。适用于弹出提示框、登陆表单等场景。</p><p>​        ES5：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function Terminator(name,height,target)&#123;</span><br><span class="line">if(Terminator.flag)</span><br><span class="line">return Terminator.flag;</span><br><span class="line">this.name &#x3D; name;</span><br><span class="line">this.height &#x3D; height;</span><br><span class="line">this.target &#x3D; target;</span><br><span class="line">Terminator.flag &#x3D; this;</span><br><span class="line">&#125;</span><br><span class="line">var robot1 &#x3D; new Terminator(&#39;T800&#39;.&#39;190cm&#39;,&#39;Su San&#39;);</span><br><span class="line">var robet2 &#x3D; new Terminator(&#39;T900&#39;,&#39;200cm&#39;,&#39;John&#39;);</span><br><span class="line">console.log(robot1 &#x3D;&#x3D;&#x3D; robot2); &#x2F;&#x2F;true</span><br><span class="line">console.log(robot1); &#x2F;&#x2F;Terminator&#123;name:&#39;T800&#39;,height:&#39;190cm&#39;,target:&#39;Su San&#39;&#125;</span><br><span class="line">console.log(robot2); &#x2F;&#x2F;Terminator&#123;name:&#39;T800&#39;,height:&#39;190cm&#39;,target:&#39;Su San&#39;&#125;</span><br></pre></td></tr></table></figure><p>​            ES6：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Terminator&#123;</span><br><span class="line">static flag;</span><br><span class="line">constructor(name,height,target)&#123;</span><br><span class="line">this.name &#x3D; name;</span><br><span class="line">this.height &#x3D; height;</span><br><span class="line">this.target &#x3D; target;</span><br><span class="line">&#125;</span><br><span class="line">static build(name,height,target)&#123;</span><br><span class="line">if(this.flag) </span><br><span class="line">return this.flag;</span><br><span class="line">this.flag &#x3D; new Terminator(name,height,target);</span><br><span class="line">return this.flag</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">const robot1 &#x3D; Terminator.build(&#39;T800&#39;.&#39;190cm&#39;,&#39;Su San&#39;);</span><br><span class="line">const robot2 &#x3D; Terminator.build(&#39;T900&#39;,&#39;200cm&#39;,&#39;John&#39;);</span><br><span class="line">console.log(robot1 &#x3D;&#x3D;&#x3D; robot2) &#x2F;&#x2F;true</span><br><span class="line">console.log(robot1) &#x2F;&#x2F;Terminator&#123;name:&#39;T800&#39;,height:&#39;190cm&#39;,target:&#39;Su San&#39;&#125;</span><br><span class="line">console.log(robot2) &#x2F;&#x2F;Terminator&#123;name:&#39;T800&#39;,height:&#39;190cm&#39;,target:&#39;Su San&#39;&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前端常用设计模式&quot;&gt;&lt;a href=&quot;#前端常用设计模式&quot; class=&quot;headerlink&quot; title=&quot;前端常用设计模式&quot;&gt;&lt;/a&gt;前端常用设计模式&lt;/h1&gt;&lt;h2 id=&quot;1-单例模式&quot;&gt;&lt;a href=&quot;#1-单例模式&quot; class=&quot;headerli
+      
     
     </summary>
     
